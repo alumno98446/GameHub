@@ -1,0 +1,10 @@
+# Configuración del editor
+.idea/
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Dependencias (por si algún día instalas algo con npm)
+node_modules/
