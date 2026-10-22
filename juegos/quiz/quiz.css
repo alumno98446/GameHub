@@ -1,0 +1,72 @@
+/* ---------- Barra de progreso ---------- */
+
+/* Progress de Bootstrap con nuestros colores: solo cambiamos sus variables */
+.barra-quiz {
+    --bs-progress-height: 0.6rem;
+    --bs-progress-bg: var(--gh-rosa-claro);
+    --bs-progress-bar-bg: var(--gh-rosa);
+    --bs-progress-border-radius: 50rem;
+}
+
+
+/* ---------- Respuestas ---------- */
+
+/* Botones de Bootstrap con nuestras variables, con el texto alineado a la izquierda */
+.respuesta {
+    --bs-btn-bg: white;
+    --bs-btn-hover-bg: var(--gh-rosa-claro);
+    --bs-btn-active-bg: var(--gh-rosa-claro);
+    --bs-btn-border-color: #e3d6de;
+    --bs-btn-hover-border-color: var(--gh-rosa);
+    --bs-btn-active-border-color: var(--gh-rosa);
+    --bs-btn-color: var(--gh-noche);
+    --bs-btn-hover-color: var(--gh-noche);
+    --bs-btn-active-color: var(--gh-noche);
+    --bs-btn-padding-y: 0.9rem;
+    --bs-btn-border-radius: 1rem;
+    --bs-btn-font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: start;
+}
+
+/* Letra A, B, C, D en un círculo */
+.letra {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: var(--gh-rosa-claro);
+    color: var(--gh-rosa);
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+/* Respuesta correcta: verde, como en cualquier concurso */
+.respuesta-correcta {
+    --bs-btn-bg: #e8f6ee;
+    --bs-btn-hover-bg: #e8f6ee;
+    --bs-btn-border-color: #198754;
+    --bs-btn-hover-border-color: #198754;
+}
+
+.respuesta-correcta .letra {
+    background-color: #198754;
+    color: white;
+}
+
+/* Respuesta elegida que era incorrecta: roja */
+.respuesta-fallada {
+    --bs-btn-bg: #fdecee;
+    --bs-btn-hover-bg: #fdecee;
+    --bs-btn-border-color: #dc3545;
+    --bs-btn-hover-border-color: #dc3545;
+}
+
+.respuesta-fallada .letra {
+    background-color: #dc3545;
+    color: white;
+}
