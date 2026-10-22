@@ -1,0 +1,86 @@
+/* ---------- Dibujo del ahorcado ---------- */
+
+.dibujo-ahorcado {
+    width: 100%;
+}
+
+/* La horca en color noche y el muñeco en rosa */
+.horca {
+    stroke: var(--gh-noche);
+}
+
+.muneco {
+    stroke: var(--gh-rosa);
+}
+
+/* Las partes que aún no se han dibujado: casi invisibles y con línea discontinua */
+.pendiente {
+    stroke: var(--gh-noche);
+    opacity: 0.12;
+    stroke-dasharray: 8 8;
+}
+
+/* Efecto de "dibujarse solo".
+   Con pathLength="1" en el SVG, cada trazo mide 1 aunque sea largo o corto.
+   - stroke-dasharray: 1  → el trazo es un único guion de largo 1 (el trazo entero)
+   - stroke-dashoffset: 1 → ese guion empieza desplazado del todo, así que no se ve
+   La animación lleva el desplazamiento a 0 y el trazo aparece de principio a fin.
+   Cada trazo espera según su --orden (puesto en el HTML) para dibujarse uno detrás de otro */
+.trazo {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: dibujar 0.4s ease-out forwards;
+    animation-delay: calc(var(--orden) * 0.3s);
+}
+
+@keyframes dibujar {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/* ---------- Palabra ---------- */
+
+/* Cada letra de la palabra, con una raya debajo */
+.hueco {
+    width: 2rem;
+    height: 2.6rem;
+    border-bottom: 3px solid var(--gh-noche);
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 2.6rem;
+    color: var(--gh-rosa);
+}
+
+
+/* ---------- Teclado ---------- */
+
+/* Botones de Bootstrap con nuestras variables */
+.tecla-ahorcado {
+    --bs-btn-bg: var(--gh-rosa-claro);
+    --bs-btn-hover-bg: #fadbea;
+    --bs-btn-active-bg: #f5b3d3;
+    --bs-btn-color: var(--gh-noche);
+    --bs-btn-hover-color: var(--gh-noche);
+    --bs-btn-active-color: var(--gh-noche);
+    --bs-btn-font-weight: 700;
+    --bs-btn-padding-x: 0;
+    width: 2.4rem;
+}
+
+/* Letra que está en la palabra */
+.acertada {
+    --bs-btn-bg: var(--gh-rosa);
+    --bs-btn-hover-bg: var(--gh-rosa);
+    --bs-btn-color: white;
+    --bs-btn-hover-color: white;
+}
+
+/* Letra que no está: gris y tachada. Bootstrap ya la deja sin poder pulsar por el atributo disabled */
+.fallada {
+    --bs-btn-disabled-bg: #ece4ea;
+    --bs-btn-disabled-color: #9b8b96;
+    --bs-btn-disabled-border-color: transparent;
+    text-decoration: line-through;
+}

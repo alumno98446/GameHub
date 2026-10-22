@@ -53,12 +53,87 @@
 
     <!-- Zona de juego -->
     <main class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-sm-10 col-md-7 col-lg-5">
-                <div class="card tarjeta-juego p-4 text-center">
-                    <p class="text-body-secondary mb-0">Aquí irá el juego</p>
+        <div class="row g-4 justify-content-center align-items-center">
+
+            <!-- Izquierda: el dibujo del ahorcado, que se dibuja trazo a trazo al cargar -->
+            <div class="col-sm-8 col-md-5 col-lg-4">
+                <div class="card tarjeta-juego p-4">
+                    <svg class="dibujo-ahorcado" viewBox="0 0 200 220" fill="none" stroke-width="6"
+                        stroke-linecap="round" role="img" aria-label="Ahorcado con 4 de 6 partes dibujadas">
+                        <!-- La horca -->
+                        <line class="trazo horca" pathLength="1" style="--orden: 0" x1="20" y1="210" x2="180" y2="210"></line>
+                        <line class="trazo horca" pathLength="1" style="--orden: 1" x1="50" y1="210" x2="50" y2="20"></line>
+                        <line class="trazo horca" pathLength="1" style="--orden: 2" x1="50" y1="20" x2="130" y2="20"></line>
+                        <line class="trazo horca" pathLength="1" style="--orden: 3" x1="130" y1="20" x2="130" y2="45"></line>
+                        <!-- El muñeco: 4 fallos = cabeza, cuerpo y dos brazos -->
+                        <circle class="trazo muneco" pathLength="1" style="--orden: 4" cx="130" cy="65" r="20"></circle>
+                        <line class="trazo muneco" pathLength="1" style="--orden: 5" x1="130" y1="85" x2="130" y2="140"></line>
+                        <line class="trazo muneco" pathLength="1" style="--orden: 6" x1="130" y1="100" x2="105" y2="125"></line>
+                        <line class="trazo muneco" pathLength="1" style="--orden: 7" x1="130" y1="100" x2="155" y2="125"></line>
+                        <!-- Las piernas, apenas visibles: son los 2 fallos que le quedan -->
+                        <line class="pendiente" x1="130" y1="140" x2="110" y2="180"></line>
+                        <line class="pendiente" x1="130" y1="140" x2="150" y2="180"></line>
+                    </svg>
                 </div>
             </div>
+
+            <!-- Derecha: palabra, fallos y teclado -->
+            <div class="col-md-7 col-lg-6">
+                <div class="card tarjeta-juego p-4 text-center">
+
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
+                        <span class="badge rounded-pill text-bg-light border px-3 py-2">💡 Lenguaje de la web</span>
+                        <span class="badge rounded-pill bg-noche px-3 py-2">Fallos: 4 de 6</span>
+                    </div>
+
+                    <!-- La palabra: JAVASCRIPT, con las letras acertadas y los huecos que faltan -->
+                    <div class="d-flex justify-content-center flex-wrap gap-2 mb-4" aria-label="_ A _ A S C _ _ _ T">
+                        <span class="hueco"></span>
+                        <span class="hueco">A</span>
+                        <span class="hueco"></span>
+                        <span class="hueco">A</span>
+                        <span class="hueco">S</span>
+                        <span class="hueco">C</span>
+                        <span class="hueco"></span>
+                        <span class="hueco"></span>
+                        <span class="hueco"></span>
+                        <span class="hueco">T</span>
+                    </div>
+
+                    <!-- Teclado: acertadas en rosa, falladas tachadas y desactivadas -->
+                    <div class="d-flex justify-content-center flex-wrap gap-1">
+                        <button type="button" class="btn tecla-ahorcado acertada">A</button>
+                        <button type="button" class="btn tecla-ahorcado">B</button>
+                        <button type="button" class="btn tecla-ahorcado acertada">C</button>
+                        <button type="button" class="btn tecla-ahorcado">D</button>
+                        <button type="button" class="btn tecla-ahorcado fallada" disabled>E</button>
+                        <button type="button" class="btn tecla-ahorcado">F</button>
+                        <button type="button" class="btn tecla-ahorcado">G</button>
+                        <button type="button" class="btn tecla-ahorcado">H</button>
+                        <button type="button" class="btn tecla-ahorcado">I</button>
+                        <button type="button" class="btn tecla-ahorcado">J</button>
+                        <button type="button" class="btn tecla-ahorcado">K</button>
+                        <button type="button" class="btn tecla-ahorcado">L</button>
+                        <button type="button" class="btn tecla-ahorcado fallada" disabled>M</button>
+                        <button type="button" class="btn tecla-ahorcado">N</button>
+                        <button type="button" class="btn tecla-ahorcado">Ñ</button>
+                        <button type="button" class="btn tecla-ahorcado fallada" disabled>O</button>
+                        <button type="button" class="btn tecla-ahorcado">P</button>
+                        <button type="button" class="btn tecla-ahorcado">Q</button>
+                        <button type="button" class="btn tecla-ahorcado">R</button>
+                        <button type="button" class="btn tecla-ahorcado acertada">S</button>
+                        <button type="button" class="btn tecla-ahorcado acertada">T</button>
+                        <button type="button" class="btn tecla-ahorcado fallada" disabled>U</button>
+                        <button type="button" class="btn tecla-ahorcado">V</button>
+                        <button type="button" class="btn tecla-ahorcado">W</button>
+                        <button type="button" class="btn tecla-ahorcado">X</button>
+                        <button type="button" class="btn tecla-ahorcado">Y</button>
+                        <button type="button" class="btn tecla-ahorcado">Z</button>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </main>
 
