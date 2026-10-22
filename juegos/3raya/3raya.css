@@ -44,3 +44,19 @@
     --bs-btn-hover-color: white;
     --bs-btn-active-color: white;
 }
+
+/* Letras de los jugadores a los lados del tablero */
+.jugador-x {
+    color: var(--gh-rosa);
+}
+
+.jugador-o {
+    color: var(--gh-noche);
+}
+
+/* Tamaño de las letras: crece con la pantalla, entre 5rem y 9rem */
+.jugador-x,
+.jugador-o {
+    font-size: clamp(5rem, 10vw, 9rem);
+    line-height: 1;
+}

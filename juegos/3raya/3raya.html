@@ -55,8 +55,14 @@
 
     <!-- Zona de juego -->
     <main class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-sm-10 col-md-7 col-lg-5">
+        <div class="row justify-content-center align-items-center">
+
+            <!-- Jugador X: solo desde md -->
+            <div class="col-auto d-none d-md-block px-md-3 px-lg-5">
+                <span id="jugador-x" class="jugador-x fw-bold">X</span>
+            </div>
+
+            <div class="col-sm-10 col-md-6 col-lg-5">
                 <div class="card tarjeta-juego p-4 text-center">
 
                     <p class="fs-5 mb-4">Turno de <span id="turno-actual"
@@ -81,6 +87,12 @@
 
                 </div>
             </div>
+
+            <!-- Jugador O: solo desde md -->
+            <div class="col-auto d-none d-md-block px-md-3 px-lg-5">
+                <span id="jugador-o" class="jugador-o fw-bold">O</span>
+            </div>
+
         </div>
     </main>
 
