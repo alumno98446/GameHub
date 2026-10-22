@@ -1,0 +1,168 @@
+:root {
+    --gh-rosa: #d63384;
+    --gh-rosa-oscuro: #ad2a6c;
+    --gh-rosa-claro: #fdf0f6;
+    --gh-noche: #1b1029;
+
+    --bs-body-font-family: 'Outfit', sans-serif;
+
+    --bs-body-bg: #f6f2f5;
+}
+
+/* Fondo para navbar y footer */
+.bg-noche {
+    background-color: var(--gh-noche);
+}
+
+/* Botón principal en rosa y solo cambiamos las variables de Bootstrap */
+.btn-primary {
+    /* Color del botón sin hacer nada */
+    --bs-btn-bg: var(--gh-rosa);
+    --bs-btn-border-color: var(--gh-rosa);
+
+    /* Color del botón con hover */
+    --bs-btn-hover-bg: var(--gh-rosa-oscuro);
+    --bs-btn-hover-border-color: var(--gh-rosa-oscuro);
+
+    /* Color del botón al mantenerlo pulsado */
+    --bs-btn-active-bg: var(--gh-rosa-oscuro);
+    --bs-btn-active-border-color: var(--gh-rosa-oscuro);
+
+    /* Sombra al llegar a él con el tabulador */
+    --bs-btn-focus-shadow-rgb: 214, 51, 132;
+}
+
+
+/* Logo rosa en reposo y blanco al pasar el ratón, con un cambio suave */
+.navbar-brand {
+    --bs-navbar-brand-color: var(--gh-rosa);
+    --bs-navbar-brand-hover-color: white;
+    transition: color 0.9s;
+    /* el cambio dura 0.9 segundos */
+}
+
+/* Fondo morado noche con un resplandor rosa arriba a la derecha */
+.hero {
+    background-color: var(--gh-noche);
+    background-image: radial-gradient(circle at 80% 30%, rgba(214, 51, 132, 0.45), transparent 50%);
+}
+
+/* Fichas blancas con el icono de cada juego, flotando arriba y abajo */
+.hero-ficha {
+    width: 140px;
+    background-color: white;
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35);
+    animation: flotar 4s ease-in-out infinite;
+}
+
+/* Cada ficha con una inclinación distinta, como si estuvieran tiradas en una mesa,
+   y empezando la animación en un momento distinto para que no se muevan a la vez */
+.hero-ficha-1 {
+    transform: rotate(-8deg);
+}
+
+.hero-ficha-2 {
+    transform: translateY(-2rem) rotate(4deg);
+    animation-delay: -1.3s;
+}
+
+.hero-ficha-3 {
+    transform: rotate(-3deg);
+    animation-delay: -2.6s;
+}
+
+/* Usamos "translate" y no "transform" para no borrar la inclinación (rotate) de cada ficha */
+@keyframes flotar {
+
+    0%,
+    100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -12px;
+    }
+
+}
+
+/* Degradado de nuestro rosa al morado noche */
+.destacado {
+    background-image: linear-gradient(5deg, var(--gh-rosa), var(--gh-noche));
+}
+
+/* Icono dentro de un círculo blanco */
+.destacado-icono {
+    width: 120px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 34%;
+}
+
+/* Pastillas de Bootstrap con nuestros colores */
+.filtros {
+    --bs-nav-pills-border-radius: 50rem;
+    --bs-nav-pills-link-active-bg: var(--gh-rosa);
+    --bs-nav-link-color: var(--bs-body-color);
+    --bs-nav-link-hover-color: var(--gh-rosa);
+}
+
+/* cambio variables de la card de Bootstrap */
+.tarjeta-juego {
+    --bs-card-bg: white; /* fondo blanco porque bs usa el color del fondo de la página */
+    --bs-card-border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.75rem rgba(27, 16, 41, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Al pasar el ratón la tarjeta sube un poco y la sombra crece */
+.tarjeta-juego:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 1rem 2rem rgba(27, 16, 41, 0.15);
+}
+
+/* Zona de la imagen con fondo rosa suave */
+.tarjeta-imagen {
+    background-color: var(--gh-rosa-claro);
+}
+
+/* Todas las imágenes iguales aunque los PNG tengan tamaños distintos */
+.tarjeta-imagen img {
+    height: 180px;
+    object-fit: contain;
+    /* para que el icono del juego no se deforme */
+    padding: 1.5rem;
+}
+
+/* Borde rosa en los badges informativos de las tarjetas (el de "Nuevo" no) */
+.tarjeta-imagen .text-bg-light {
+    border: 1px solid var(--gh-rosa);
+}
+
+/* relleno de rosa para que destaque */
+.badge-nuevo {
+    background-color: var(--gh-rosa);
+    color: white;
+}
+
+/* Etiqueta de categoría encima del título */
+.categoria {
+    color: var(--gh-rosa);
+    letter-spacing: 0.08em;
+}
+
+.footer-logo {
+    color: var(--gh-rosa);
+}
+
+.footer-enlace {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-enlace:hover {
+    color: var(--gh-rosa);
+}

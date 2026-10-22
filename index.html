@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameHub</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilos.css">
 
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar bg-dark py-3 sticky-top">
-        <div class="container-fluid justify-content-center">
-            <a class="navbar-brand" href="#">
+    <nav class="navbar bg-noche py-3 sticky-top" data-bs-theme="dark">
+
+        <!--el contenedor ocupa todo el ancho y centra el logo en horizontal-->
+        <div class="container-fluid justify-content-center"> 
+
+            <a class="navbar-brand fw-bold" href="index.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="3" y="3" width="18" height="18" rx="3"></rect>
@@ -27,50 +31,253 @@
             </a>
         </div>
     </nav>
-    <main class="container py-4">
-        <h1 class="text-center mb-4">Bienvenido a Game Hub</h1>
+
+    <section class="hero text-white py-5">
+        <div class="container py-lg-4">
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+                    <span class="badge rounded-pill bg-white text-dark mb-3">GAME HUB</span> <!--elemento en linea-->
+                    <h1 class="display-4 fw-bold">Ocho juegos, cero descargas</h1>
+                    <p class="lead text-white-50 mb-4">Clásicos de siempre y retos de palabras, lógica y misterio.
+                        Elige uno y juega desde el navegador.</p>
+                    <a href="#juegos" class="btn btn-primary btn-lg rounded-pill px-5 fw-semibold">Ver juegos</a>
+                </div>
+
+                <div class="col-lg-6 d-none d-lg-flex justify-content-center gap-4">
+                    <img src="assets/img/tres-en-raya.png" alt="" class="hero-ficha hero-ficha-1">
+                    <img src="assets/img/wordle.png" alt="" class="hero-ficha hero-ficha-2">
+                    <img src="assets/img/2048.png" alt="" class="hero-ficha hero-ficha-3">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <main class="container py-4" id="juegos">
+        <!-- Juego destacado: el 3 en raya es el único que se puede jugar -->
+        <section class="destacado text-white rounded-5 p-4 p-lg-5 mb-5">
+            <div class="row align-items-center g-4">
+                <div class="col-md-auto text-center">
+                    <img src="assets/img/tres-en-raya.png" alt="" class="destacado-icono">
+                </div>
+                <div class="col-md text-center text-md-start">
+                    <span class="badge rounded-pill bg-white text-dark mb-2">Ya disponible</span>
+                    <h2 class="fw-bold mb-1">3 en raya</h2>
+                    <p class="mb-0 text-white-50">Reta a un amigo en el mismo ordenador y consigue alinear tus tres
+                        fichas antes que él.</p>
+                </div>
+                <div class="col-md-auto text-center">
+                    <a href="juegos/3raya/3raya.html" class="btn btn-light btn-lg rounded-pill px-5 fw-semibold">Jugar
+                        ahora</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Título de sección a la izquierda y filtros a la derecha -->
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+            <div>
+                <h2 class="fw-bold mb-1">Todos los juegos</h2>
+                <p class="text-body-secondary mb-0">Palabras, lógica o estrategia: elige tu reto.</p>
+            </div>
+
+            <ul class="nav nav-pills filtros bg-white border rounded-pill p-1">
+                <li class="nav-item"><button type="button" class="nav-link active">Todos</button></li>
+                <li class="nav-item"><button type="button" class="nav-link">Palabras</button></li>
+                <li class="nav-item"><button type="button" class="nav-link">Lógica</button></li>
+                <li class="nav-item"><button type="button" class="nav-link">Estrategia</button></li>
+                <li class="nav-item"><button type="button" class="nav-link">Misterio</button></li>
+            </ul>
+        </div>
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
             <div class="col">
-                <div class="card h-100">
-                    <img src="assets/img/tres-en-raya.png" class="card-img-top" alt="Icono 3 en raya">
-                    <div class="card-body">
-                        <h5 class="card-title">3 en raya</h5>
-                        <p class="card-text">Juega contra otro jugador por turnos y consigue tres en raya.</p>
-                        <a href="juegos/3raya/3raya.html" class="btn btn-primary">Jugar</a>
+                <article class="card tarjeta-juego h-100">
+                    <div class="tarjeta-imagen position-relative">
+                        <img src="assets/img/tres-en-raya.png" class="card-img-top" alt="Icono del juego 3 en raya">
+                        <span class="badge rounded-pill text-bg-light position-absolute top-0 end-0 m-3">2
+                            jugadores</span>
                     </div>
-                </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="categoria text-uppercase small fw-semibold mb-1">Estrategia</p>
+                        <h3 class="card-title h4 fw-bold">3 en raya</h3>
+                        <p class="card-text text-body-secondary">Juega contra otro jugador por turnos y consigue tres en
+                            raya.</p>
+                        <a href="juegos/3raya/3raya.html"
+                            class="btn btn-primary rounded-pill px-4 fw-semibold mt-auto align-self-start">Jugar</a>
+                    </div>
+                </article>
+            </div>
+
+
+            <div class="col">
+                <article class="card tarjeta-juego h-100">
+                    <div class="tarjeta-imagen position-relative">
+                        <img src="assets/img/juego-del-ahorcado.png" class="card-img-top"
+                            alt="Icono del juego Ahorcado">
+                        <span class="badge rounded-pill text-bg-light position-absolute top-0 end-0 m-3">1
+                            jugador</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="categoria text-uppercase small fw-semibold mb-1">Palabras</p>
+                        <h3 class="card-title h4 fw-bold">Ahorcado</h3>
+                        <p class="card-text text-body-secondary">Adivina la palabra antes de que el ahorcado se
+                            complete.</p>
+                        <a href="juegos/ahorcado/ahorcado.html"
+                            class="btn btn-primary rounded-pill px-4 fw-semibold mt-auto align-self-start">Jugar</a>
+                    </div>
+                </article>
             </div>
 
             <div class="col">
-                <div class="card h-100">
-                    <img src="assets/img/blackstories.png" class="card-img-top" alt="Icono blackstories">
-                    <div class="card-body">
-                        <h5 class="card-title">Black Stories</h5>
-                        <p class="card-text">Juega contra otro jugador por turnos y consigue tres en raya.</p>
-                        <a href="juegos/blackstories/blackstories.html" class="btn btn-primary">Jugar</a>
+                <article class="card tarjeta-juego h-100">
+                    <div class="tarjeta-imagen position-relative">
+                        <img src="assets/img/blackstories.png" class="card-img-top" alt="Icono del juego Black Stories">
+                        <span class="badge rounded-pill text-bg-light position-absolute top-0 end-0 m-3">En grupo</span>
                     </div>
-                </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="categoria text-uppercase small fw-semibold mb-1">Misterio</p>
+                        <h3 class="card-title h4 fw-bold">Black Stories</h3>
+                        <p class="card-text text-body-secondary">Descubre qué ha ocurrido haciendo preguntas que solo se
+                            responden con sí o no.</p>
+                        <a href="juegos/blackstories/blackstories.html"
+                            class="btn btn-primary rounded-pill px-4 fw-semibold mt-auto align-self-start">Jugar</a>
+                    </div>
+                </article>
             </div>
 
             <div class="col">
-                <div class="card h-100">
-                    <img src="assets/img/quizas.png" class="card-img-top" alt="Icono quiz">
-                    <div class="card-body">
-                        <h5 class="card-title">Quiz Trivial</h5>
-                        <p class="card-text">Juega contra otro jugador por turnos y consigue tres en raya.</p>
-                        <a href="juegos/quiz/quiz.html" class="btn btn-primary">Jugar</a>
+                <article class="card tarjeta-juego h-100">
+                    <div class="tarjeta-imagen position-relative">
+                        <img src="assets/img/quizas.png" class="card-img-top" alt="Icono del juego Quiz">
+                        <span class="badge rounded-pill text-bg-light position-absolute top-0 end-0 m-3">1
+                            jugador</span>
                     </div>
-                </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="categoria text-uppercase small fw-semibold mb-1">Cultura general</p>
+                        <h3 class="card-title h4 fw-bold">Quiz</h3>
+                        <p class="card-text text-body-secondary">Responde preguntas sobre diversos temas.</p>
+                        <a href="juegos/quiz/quiz.html"
+                            class="btn btn-primary rounded-pill px-4 fw-semibold mt-auto align-self-start">Jugar</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="card tarjeta-juego h-100">
+                    <div class="tarjeta-imagen position-relative">
+                        <img src="assets/img/wordle.png" class="card-img-top" alt="Icono del juego Wordle">
+                        <span class="badge rounded-pill text-bg-light position-absolute top-0 end-0 m-3">6
+                            intentos</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="categoria text-uppercase small fw-semibold mb-1">Palabras</p>
+                        <h3 class="card-title h4 fw-bold">Wordle</h3>
+                        <p class="card-text text-body-secondary">Descubre la palabra secreta antes de agotar tus
+                            intentos.</p>
+                        <a href="juegos/wordle/wordle.html"
+                            class="btn btn-primary rounded-pill px-4 fw-semibold mt-auto align-self-start">Jugar</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="card tarjeta-juego h-100">
+                    <div class="tarjeta-imagen position-relative">
+                        <img src="assets/img/pasatiempo.png" class="card-img-top" alt="Icono del juego Sudoku">
+                        <span class="badge rounded-pill text-bg-light position-absolute top-0 end-0 m-3">1
+                            jugador</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="categoria text-uppercase small fw-semibold mb-1">Lógica</p>
+                        <h3 class="card-title h4 fw-bold">Sudoku</h3>
+                        <p class="card-text text-body-secondary">Completa la cuadrícula del 1 al 9 siguiendo las reglas
+                            del sudoku.</p>
+                        <a href="juegos/sudoku/sudoku.html"
+                            class="btn btn-primary rounded-pill px-4 fw-semibold mt-auto align-self-start">Jugar</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="card tarjeta-juego h-100">
+                    <div class="tarjeta-imagen position-relative">
+                        <img src="assets/img/crucigrama.png" class="card-img-top" alt="Icono del juego Crucigramas">
+                        <span class="badge rounded-pill text-bg-light position-absolute top-0 end-0 m-3">1
+                            jugador</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="categoria text-uppercase small fw-semibold mb-1">Palabras</p>
+                        <h3 class="card-title h4 fw-bold">Crucigramas</h3>
+                        <p class="card-text text-body-secondary">Pon a prueba tu vocabulario completando las casillas
+                            con las pistas dadas.</p>
+                        <a href="juegos/crucigrama/crucigrama.html"
+                            class="btn btn-primary rounded-pill px-4 fw-semibold mt-auto align-self-start">Jugar</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col">
+                <article class="card tarjeta-juego h-100">
+                    <div class="tarjeta-imagen position-relative">
+                        <img src="assets/img/2048.png" class="card-img-top" alt="Icono del juego 2048">
+                        <span class="badge rounded-pill badge-nuevo position-absolute top-0 end-0 m-3">Nuevo</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <p class="categoria text-uppercase small fw-semibold mb-1">Puzle</p>
+                        <h3 class="card-title h4 fw-bold">2048</h3>
+                        <p class="card-text text-body-secondary">Desliza las fichas y junta números iguales hasta
+                            conseguir la ficha 2048.</p>
+                        <a href="juegos/2048/2048.html"
+                            class="btn btn-primary rounded-pill px-4 fw-semibold mt-auto align-self-start">Jugar</a>
+                    </div>
+                </article>
             </div>
         </div>
-
-
     </main>
 
-    <footer class="bg-dark text-white py-3 mt-auto text-center">
+    <footer class="bg-noche text-white mt-auto pt-5 pb-3">
         <div class="container">
-            <p class="mb-0">Proyecto DWEC Adrián Lozano Díaz — 2º DAW</p>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <p class="footer-logo fs-4 fw-bold mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                            <circle cx="8" cy="8" r="1.3" fill="currentColor"></circle>
+                            <circle cx="16" cy="8" r="1.3" fill="currentColor"></circle>
+                            <circle cx="12" cy="12" r="1.3" fill="currentColor"></circle>
+                            <circle cx="8" cy="16" r="1.3" fill="currentColor"></circle>
+                            <circle cx="16" cy="16" r="1.3" fill="currentColor"></circle>
+                        </svg>
+                        Game Hub
+                    </p>
+                    <p class="text-white-50 mb-0">Minijuegos clásicos y retos de ingenio, todos en una sola web.</p>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <h3 class="h6 text-uppercase fw-semibold mb-3">Juegos</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="juegos/3raya/3raya.html" class="footer-enlace">3 en raya</a></li>
+                        <li class="mb-2"><a href="juegos/ahorcado/ahorcado.html" class="footer-enlace">Ahorcado</a></li>
+                        <li class="mb-2"><a href="juegos/blackstories/blackstories.html" class="footer-enlace">Black Stories</a></li>
+                        <li class="mb-2"><a href="juegos/quiz/quiz.html" class="footer-enlace">Quiz</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <h3 class="h6 text-uppercase fw-semibold mb-3">Más juegos</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="juegos/wordle/wordle.html" class="footer-enlace">Wordle</a></li>
+                        <li class="mb-2"><a href="juegos/sudoku/sudoku.html" class="footer-enlace">Sudoku</a></li>
+                        <li class="mb-2"><a href="juegos/crucigrama/crucigrama.html" class="footer-enlace">Crucigramas</a></li>
+                        <li class="mb-2"><a href="juegos/2048/2048.html" class="footer-enlace">2048</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-secondary my-4">
+            <p class="small text-white-50 text-center mb-0">Proyecto DWEC · Adrián Lozano Díaz — 2º DAW</p>
         </div>
     </footer>
 
