@@ -1,0 +1,82 @@
+/* ---------- Tablero ---------- */
+
+/* Rejilla CSS de 9 columnas iguales: las 81 casillas se colocan solas en 9 filas */
+.tablero-sudoku {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    border: 3px solid var(--gh-noche);
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+/* Cada casilla: cuadrada, con borde fino y el número centrado */
+.celda-sudoku {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #e3d6de;
+    border-bottom: 1px solid #e3d6de;
+    background-color: white;
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    color: var(--gh-rosa);
+    font-weight: 600;
+}
+
+/* Bordes gruesos que separan los bloques de 3x3 */
+.borde-derecha {
+    border-right: 3px solid var(--gh-noche);
+}
+
+.borde-abajo {
+    border-bottom: 3px solid var(--gh-noche);
+}
+
+
+/* ---------- Tipos de número ---------- */
+
+/* Números que vienen dados: no se pueden cambiar */
+.dada {
+    color: var(--gh-noche);
+    font-weight: 800;
+}
+
+/* Números escritos por el jugador */
+.usuario {
+    color: var(--gh-rosa);
+}
+
+/* ---------- Ayudas visuales ---------- */
+
+/* Fila, columna y bloque de la casilla seleccionada */
+.resaltada {
+    background-color: var(--gh-rosa-claro);
+}
+
+/* Casilla seleccionada */
+.seleccionada {
+    background-color: #f5b3d3;
+    box-shadow: inset 0 0 0 2px var(--gh-rosa);
+}
+
+/* Número que no cumple las reglas. Va después de .resaltada para que,
+   si la casilla tiene las dos clases, gane el fondo rojo del error */
+.error {
+    color: #dc3545;
+    background-color: #fdecee;
+}
+
+
+/* ---------- Botones de números ---------- */
+
+.numero-sudoku {
+    --bs-btn-bg: var(--gh-rosa-claro);
+    --bs-btn-hover-bg: #fadbea;
+    --bs-btn-active-bg: #f5b3d3;
+    --bs-btn-color: var(--gh-noche);
+    --bs-btn-hover-color: var(--gh-noche);
+    --bs-btn-active-color: var(--gh-noche);
+    --bs-btn-padding-x: 0;
+    --bs-btn-font-weight: 700;
+    min-width: 0;
+}

@@ -54,9 +54,134 @@
     <!-- Zona de juego -->
     <main class="container py-5">
         <div class="row justify-content-center">
-            <div class="col-sm-10 col-md-7 col-lg-5">
-                <div class="card tarjeta-juego p-4 text-center">
-                    <p class="text-body-secondary mb-0">Aquí irá el juego</p>
+            <div class="col-sm-11 col-md-8 col-lg-6">
+                <div class="card tarjeta-juego p-3 p-sm-4 text-center">
+
+                    <!-- Nivel (reutiliza los filtros del index), tiempo y errores -->
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                        <ul class="nav nav-pills filtros bg-white border rounded-pill p-1 small">
+                            <li class="nav-item"><button type="button" class="nav-link py-1">Fácil</button></li>
+                            <li class="nav-item"><button type="button" class="nav-link py-1 active">Medio</button></li>
+                            <li class="nav-item"><button type="button" class="nav-link py-1">Difícil</button></li>
+                        </ul>
+                        <div class="d-flex gap-2">
+                            <span class="badge rounded-pill bg-noche px-3 py-2">⏱ 04:32</span>
+                            <span class="badge rounded-pill text-bg-light border px-3 py-2">Errores: 1/3</span>
+                        </div>
+                    </div>
+
+                    <!-- Tablero 9x9: rejilla CSS con bordes gruesos cada 3 casillas -->
+                    <div class="tablero-sudoku mb-3">
+                        <!-- Fila 1 -->
+                        <div class="celda-sudoku dada">5</div>
+                        <div class="celda-sudoku dada">3</div>
+                        <div class="celda-sudoku borde-derecha usuario resaltada">4</div>
+                        <div class="celda-sudoku usuario">6</div>
+                        <div class="celda-sudoku dada">7</div>
+                        <div class="celda-sudoku borde-derecha"></div>
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku"></div>
+                        <!-- Fila 2 -->
+                        <div class="celda-sudoku dada">6</div>
+                        <div class="celda-sudoku usuario">7</div>
+                        <div class="celda-sudoku borde-derecha usuario resaltada">2</div>
+                        <div class="celda-sudoku dada">1</div>
+                        <div class="celda-sudoku dada">9</div>
+                        <div class="celda-sudoku borde-derecha dada">5</div>
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku"></div>
+                        <!-- Fila 3 -->
+                        <div class="celda-sudoku borde-abajo usuario">1</div>
+                        <div class="celda-sudoku borde-abajo dada">9</div>
+                        <div class="celda-sudoku borde-derecha borde-abajo dada resaltada">8</div>
+                        <div class="celda-sudoku borde-abajo"></div>
+                        <div class="celda-sudoku borde-abajo"></div>
+                        <div class="celda-sudoku borde-derecha borde-abajo"></div>
+                        <div class="celda-sudoku borde-abajo"></div>
+                        <div class="celda-sudoku borde-abajo dada">6</div>
+                        <div class="celda-sudoku borde-abajo"></div>
+                        <!-- Fila 4 -->
+                        <div class="celda-sudoku dada resaltada">8</div>
+                        <div class="celda-sudoku usuario resaltada">5</div>
+                        <div class="celda-sudoku borde-derecha error resaltada">4</div>
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku dada">6</div>
+                        <div class="celda-sudoku borde-derecha"></div>
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku dada">3</div>
+                        <!-- Fila 5 -->
+                        <div class="celda-sudoku dada resaltada">4</div>
+                        <div class="celda-sudoku usuario resaltada">2</div>
+                        <div class="celda-sudoku borde-derecha seleccionada"></div>
+                        <div class="celda-sudoku dada resaltada">8</div>
+                        <div class="celda-sudoku resaltada"></div>
+                        <div class="celda-sudoku borde-derecha dada resaltada">3</div>
+                        <div class="celda-sudoku resaltada"></div>
+                        <div class="celda-sudoku usuario resaltada">9</div>
+                        <div class="celda-sudoku dada resaltada">1</div>
+                        <!-- Fila 6 -->
+                        <div class="celda-sudoku borde-abajo dada resaltada">7</div>
+                        <div class="celda-sudoku borde-abajo usuario resaltada">1</div>
+                        <div class="celda-sudoku borde-derecha borde-abajo resaltada"></div>
+                        <div class="celda-sudoku borde-abajo"></div>
+                        <div class="celda-sudoku borde-abajo dada">2</div>
+                        <div class="celda-sudoku borde-derecha borde-abajo"></div>
+                        <div class="celda-sudoku borde-abajo"></div>
+                        <div class="celda-sudoku borde-abajo"></div>
+                        <div class="celda-sudoku borde-abajo dada">6</div>
+                        <!-- Fila 7 -->
+                        <div class="celda-sudoku usuario">9</div>
+                        <div class="celda-sudoku dada">6</div>
+                        <div class="celda-sudoku borde-derecha resaltada"></div>
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku borde-derecha"></div>
+                        <div class="celda-sudoku dada">2</div>
+                        <div class="celda-sudoku dada">8</div>
+                        <div class="celda-sudoku"></div>
+                        <!-- Fila 8 -->
+                        <div class="celda-sudoku usuario">2</div>
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku borde-derecha resaltada"></div>
+                        <div class="celda-sudoku dada">4</div>
+                        <div class="celda-sudoku dada">1</div>
+                        <div class="celda-sudoku borde-derecha dada">9</div>
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku dada">5</div>
+                        <!-- Fila 9 -->
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku borde-derecha resaltada"></div>
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku dada">8</div>
+                        <div class="celda-sudoku borde-derecha"></div>
+                        <div class="celda-sudoku"></div>
+                        <div class="celda-sudoku dada">7</div>
+                        <div class="celda-sudoku dada">9</div>
+                    </div>
+
+                    <!-- Números para rellenar la casilla seleccionada -->
+                    <div class="d-flex gap-1 mb-3">
+                        <button type="button" class="btn numero-sudoku flex-fill">1</button>
+                        <button type="button" class="btn numero-sudoku flex-fill">2</button>
+                        <button type="button" class="btn numero-sudoku flex-fill">3</button>
+                        <button type="button" class="btn numero-sudoku flex-fill">4</button>
+                        <button type="button" class="btn numero-sudoku flex-fill">5</button>
+                        <button type="button" class="btn numero-sudoku flex-fill">6</button>
+                        <button type="button" class="btn numero-sudoku flex-fill">7</button>
+                        <button type="button" class="btn numero-sudoku flex-fill">8</button>
+                        <button type="button" class="btn numero-sudoku flex-fill">9</button>
+                    </div>
+
+                    <div class="d-flex justify-content-center gap-2">
+                        <button type="button" class="btn btn-light border rounded-pill px-4 fw-semibold">Borrar</button>
+                        <button type="button" class="btn btn-primary rounded-pill px-4 fw-semibold">Pista</button>
+                    </div>
+
                 </div>
             </div>
         </div>
