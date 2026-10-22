@@ -1,0 +1,66 @@
+/* ---------- Tablero ---------- */
+
+/* Rejilla CSS de 6 columnas iguales, como el sudoku */
+.tablero-cruci {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+}
+
+/* Casilla blanca: cuadrada y con la letra centrada.
+   position: relative para poder colocar el número en su esquina */
+.casilla-cruci {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e3d6de;
+    border-radius: 0.5rem;
+    background-color: white;
+    font-size: clamp(1.1rem, 4.5vw, 1.6rem);
+    font-weight: 800;
+    color: var(--gh-noche);
+}
+
+/* Casilla negra: no lleva letra */
+.negra {
+    background-color: var(--gh-noche);
+    border-color: var(--gh-noche);
+}
+
+/* Número pequeño en la esquina de arriba a la izquierda, como en los crucigramas de periódico */
+.numero {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--gh-rosa);
+}
+
+/* Casillas de la palabra que se está resolviendo */
+.activa {
+    background-color: var(--gh-rosa-claro);
+    border-color: #f5b3d3;
+}
+
+/* Casilla donde está escribiendo el jugador */
+.seleccionada {
+    background-color: #f5b3d3;
+    border-color: var(--gh-rosa);
+}
+
+
+/* ---------- Pistas ---------- */
+
+.pistas li {
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.5rem;
+}
+
+/* La pista de la palabra activa, resaltada igual que sus casillas */
+.pista-activa {
+    background-color: var(--gh-rosa-claro);
+    border-left: 4px solid var(--gh-rosa);
+}
