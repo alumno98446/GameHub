@@ -1,0 +1,22 @@
+/* Casillas del tablero: botones de Bootstrap con nuestras variables */
+.celda {
+    --bs-btn-bg: var(--gh-rosa-claro);
+    --bs-btn-hover-bg: #fadbea; /* un rosa algo más intenso al pasar el ratón */
+    --bs-btn-active-bg: #fadbea;
+    --bs-btn-border-radius: 1rem;
+    --bs-btn-focus-shadow-rgb: 214, 51, 132;
+    aspect-ratio: 1 / 1; /* casillas cuadradas */
+}
+
+/* Color de cada ficha. Las pondrá jQuery al hacer clic */
+.ficha-x {
+    --bs-btn-color: var(--gh-rosa);
+    --bs-btn-hover-color: var(--gh-rosa);
+    --bs-btn-active-color: var(--gh-rosa);
+}
+
+.ficha-o {
+    --bs-btn-color: var(--gh-noche);
+    --bs-btn-hover-color: var(--gh-noche);
+    --bs-btn-active-color: var(--gh-noche);
+}
