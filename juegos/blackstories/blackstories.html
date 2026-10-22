@@ -56,7 +56,56 @@
         <div class="row justify-content-center">
             <div class="col-sm-10 col-md-7 col-lg-5">
                 <div class="card tarjeta-juego p-4 text-center">
-                    <p class="text-body-secondary mb-0">Aquí irá el juego</p>
+
+                    <!-- Carta del enigma: gira al pasar el ratón (o al tocarla) y muestra la solución -->
+                    <div class="carta-misterio mb-4" tabindex="0">
+                        <div class="carta-interior">
+
+                            <div class="carta-cara bg-noche text-white rounded-4 p-4">
+                                <span class="badge rounded-pill bg-white text-dark align-self-center mb-3">Enigma nº
+                                    7</span>
+                                <h2 class="h4 fw-bold">El hombre del ascensor</h2>
+                                <p class="text-white-50">Un hombre vive en el décimo piso. Cada mañana baja en
+                                    ascensor hasta la calle. Al volver, sube en ascensor hasta el séptimo y el resto
+                                    lo hace por las escaleras. Los días de lluvia sube directamente hasta el décimo.
+                                    ¿Por qué?</p>
+                                <p class="categoria text-uppercase small fw-semibold mb-0">Pasa el ratón para ver la
+                                    solución</p>
+                            </div>
+
+                            <div class="carta-cara carta-dorso text-white rounded-4 p-4">
+                                <span class="badge rounded-pill bg-white text-dark align-self-center mb-3">Solución</span>
+                                <p class="fs-5 mb-0">Es muy bajito y solo llega al botón del séptimo. Los días de
+                                    lluvia lleva paraguas y lo usa para pulsar el del décimo.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Preguntas ya hechas: solo se responden con sí, no o irrelevante -->
+                    <h3 class="h6 text-uppercase fw-semibold text-start mb-2">Preguntas</h3>
+                    <ul class="list-group text-start mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            ¿Tiene miedo a los ascensores?
+                            <span class="badge rounded-pill text-bg-danger">No</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            ¿Tiene algo que ver con su cuerpo?
+                            <span class="badge rounded-pill text-bg-success">Sí</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            ¿Vive solo?
+                            <span class="badge rounded-pill text-bg-light border">Irrelevante</span>
+                        </li>
+                    </ul>
+
+                    <!-- Nueva pregunta -->
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Haz una pregunta de sí o no..."
+                            aria-label="Pregunta">
+                        <button type="button" class="btn btn-primary fw-semibold">Preguntar</button>
+                    </div>
+
                 </div>
             </div>
         </div>

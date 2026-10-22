@@ -1,0 +1,38 @@
+/* ---------- Carta que gira en 3D ---------- */
+
+/* El contenedor da la "profundidad": sin perspective el giro se vería plano */
+.carta-misterio {
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+/* La parte que gira. Las dos caras se colocan en la misma celda de una rejilla,
+   una encima de otra, así la carta mide lo que mida la cara más alta */
+.carta-interior {
+    display: grid;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+}
+
+/* Al pasar el ratón, o al tocarla / llegar con el tabulador, la carta da media vuelta */
+.carta-misterio:hover .carta-interior,
+.carta-misterio:focus .carta-interior {
+    transform: rotateY(180deg);
+}
+
+/* Las dos caras: en la misma celda y ocultas cuando están de espaldas */
+.carta-cara {
+    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 18rem;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Safari */
+}
+
+/* La cara de atrás empieza girada: al dar la vuelta la carta, queda de frente */
+.carta-dorso {
+    transform: rotateY(180deg);
+    background-image: linear-gradient(135deg, var(--gh-rosa), var(--gh-noche));
+}
