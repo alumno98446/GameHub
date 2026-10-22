@@ -90,7 +90,8 @@ $(document).ready(function () {
     }
 
     // Reiniciar: vaciamos las casillas y volvemos al estado inicial
-    $("#btn-reiniciar").on("click", function () {
+    $("#btn-reiniciar").on("click", 
+        function () {
         celdas.text("").removeClass("ficha-x ficha-o");
         turnoActual = "X";
         juegoTerminado = false;
