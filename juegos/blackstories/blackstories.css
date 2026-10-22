@@ -45,3 +45,16 @@
     width: 45%;
     color: var(--gh-rosa);
 }
+
+
+/* ---------- Paginación de enigmas ---------- */
+
+/* Paginación de Bootstrap con nuestros colores: solo cambiamos sus variables */
+.paginacion-enigmas {
+    --bs-pagination-color: var(--gh-noche);
+    --bs-pagination-hover-color: var(--gh-rosa);
+    --bs-pagination-focus-color: var(--gh-rosa);
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(214, 51, 132, 0.25);
+    --bs-pagination-active-bg: var(--gh-rosa);
+    --bs-pagination-active-border-color: var(--gh-rosa);
+}
