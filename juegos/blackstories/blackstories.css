@@ -1,15 +1,19 @@
-/* ---------- Carta que gira en 3D ---------- */
+/* ---------- Carta vertical que gira en 3D ---------- */
 
-/* El contenedor da la "profundidad": sin perspective el giro se vería plano */
+/* El contenedor da la "profundidad": sin perspective el giro se vería plano.
+   La carta es vertical (9:16) y con un ancho máximo para que en el móvil no sea gigante */
 .carta-misterio {
     perspective: 1000px;
+    max-width: 320px;
+    aspect-ratio: 9 / 16;
     cursor: pointer;
 }
 
 /* La parte que gira. Las dos caras se colocan en la misma celda de una rejilla,
-   una encima de otra, así la carta mide lo que mida la cara más alta */
+   una encima de otra, y ocupan toda la altura de la carta */
 .carta-interior {
     display: grid;
+    height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.8s ease-in-out;
 }
@@ -25,14 +29,19 @@
     grid-area: 1 / 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    min-height: 18rem;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden; /* Safari */
+    box-shadow: 0 1rem 2rem rgba(27, 16, 41, 0.25);
 }
 
 /* La cara de atrás empieza girada: al dar la vuelta la carta, queda de frente */
 .carta-dorso {
     transform: rotateY(180deg);
     background-image: linear-gradient(135deg, var(--gh-rosa), var(--gh-noche));
+}
+
+/* Dibujo del ascensor en rosa */
+.carta-dibujo {
+    width: 45%;
+    color: var(--gh-rosa);
 }
