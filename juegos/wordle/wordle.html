@@ -55,8 +55,108 @@
     <main class="container py-5">
         <div class="row justify-content-center">
             <div class="col-sm-10 col-md-7 col-lg-5">
-                <div class="card tarjeta-juego p-4 text-center">
-                    <p class="text-body-secondary mb-0">Aquí irá el juego</p>
+                <div class="card tarjeta-juego p-3 p-sm-4 text-center">
+
+                    <!-- Mensaje de partida ganada -->
+                    <p class="mb-4"><span class="d-inline-block bg-noche text-white rounded-pill px-4 py-2 fw-semibold">¡Lo
+                            has adivinado en 3 intentos!</span></p>
+
+                    <!-- Rejilla: 6 intentos de 5 letras -->
+                    <div class="d-flex flex-column gap-2 mb-4">
+                        <div class="d-flex justify-content-center gap-2">
+                            <div class="casilla estado-ausente">R</div>
+                            <div class="casilla estado-ausente">A</div>
+                            <div class="casilla estado-ausente">T</div>
+                            <div class="casilla estado-presente">O</div>
+                            <div class="casilla estado-ausente">N</div>
+                        </div>
+                        <div class="d-flex justify-content-center gap-2">
+                            <div class="casilla estado-ausente">F</div>
+                            <div class="casilla estado-correcta">U</div>
+                            <div class="casilla estado-correcta">E</div>
+                            <div class="casilla estado-correcta">G</div>
+                            <div class="casilla estado-correcta">O</div>
+                        </div>
+                        <!-- La última fila jugada se voltea letra a letra -->
+                        <div class="d-flex justify-content-center gap-2 fila-voltea">
+                            <div class="casilla estado-correcta">J</div>
+                            <div class="casilla estado-correcta">U</div>
+                            <div class="casilla estado-correcta">E</div>
+                            <div class="casilla estado-correcta">G</div>
+                            <div class="casilla estado-correcta">O</div>
+                        </div>
+                        <div class="d-flex justify-content-center gap-2">
+                            <div class="casilla"></div>
+                            <div class="casilla"></div>
+                            <div class="casilla"></div>
+                            <div class="casilla"></div>
+                            <div class="casilla"></div>
+                        </div>
+                        <div class="d-flex justify-content-center gap-2">
+                            <div class="casilla"></div>
+                            <div class="casilla"></div>
+                            <div class="casilla"></div>
+                            <div class="casilla"></div>
+                            <div class="casilla"></div>
+                        </div>
+                        <div class="d-flex justify-content-center gap-2">
+                            <div class="casilla"></div>
+                            <div class="casilla"></div>
+                            <div class="casilla"></div>
+                            <div class="casilla"></div>
+                            <div class="casilla"></div>
+                        </div>
+                    </div>
+
+                    <!-- Teclado en pantalla: cada tecla con el color de lo que ya se sabe de esa letra -->
+                    <div class="d-flex flex-column gap-1 mb-4">
+                        <div class="d-flex justify-content-center gap-1">
+                            <button type="button" class="btn tecla">Q</button>
+                            <button type="button" class="btn tecla">W</button>
+                            <button type="button" class="btn tecla estado-correcta">E</button>
+                            <button type="button" class="btn tecla estado-ausente">R</button>
+                            <button type="button" class="btn tecla estado-ausente">T</button>
+                            <button type="button" class="btn tecla">Y</button>
+                            <button type="button" class="btn tecla estado-correcta">U</button>
+                            <button type="button" class="btn tecla">I</button>
+                            <button type="button" class="btn tecla estado-correcta">O</button>
+                            <button type="button" class="btn tecla">P</button>
+                        </div>
+                        <div class="d-flex justify-content-center gap-1">
+                            <button type="button" class="btn tecla estado-ausente">A</button>
+                            <button type="button" class="btn tecla">S</button>
+                            <button type="button" class="btn tecla">D</button>
+                            <button type="button" class="btn tecla estado-ausente">F</button>
+                            <button type="button" class="btn tecla estado-correcta">G</button>
+                            <button type="button" class="btn tecla">H</button>
+                            <button type="button" class="btn tecla estado-correcta">J</button>
+                            <button type="button" class="btn tecla">K</button>
+                            <button type="button" class="btn tecla">L</button>
+                            <button type="button" class="btn tecla">Ñ</button>
+                        </div>
+                        <div class="d-flex justify-content-center gap-1">
+                            <button type="button" class="btn tecla tecla-ancha">Enviar</button>
+                            <button type="button" class="btn tecla">Z</button>
+                            <button type="button" class="btn tecla">X</button>
+                            <button type="button" class="btn tecla">C</button>
+                            <button type="button" class="btn tecla">V</button>
+                            <button type="button" class="btn tecla">B</button>
+                            <button type="button" class="btn tecla estado-ausente">N</button>
+                            <button type="button" class="btn tecla">M</button>
+                            <button type="button" class="btn tecla tecla-ancha" aria-label="Borrar">⌫</button>
+                        </div>
+                    </div>
+
+                    <!-- Leyenda de colores -->
+                    <div class="d-flex justify-content-center flex-wrap gap-3 small text-body-secondary">
+                        <span class="d-flex align-items-center gap-1"><span
+                                class="casilla casilla-mini estado-correcta"></span> Bien colocada</span>
+                        <span class="d-flex align-items-center gap-1"><span
+                                class="casilla casilla-mini estado-presente"></span> En otro sitio</span>
+                        <span class="d-flex align-items-center gap-1"><span
+                                class="casilla casilla-mini estado-ausente"></span> No está</span>
+                    </div>
+
                 </div>
             </div>
         </div>

@@ -1,0 +1,103 @@
+/* ---------- Estados de una letra ----------
+   Cada estado solo define dos variables propias: el fondo y el color del texto.
+   Las usan tanto las casillas de la rejilla como las teclas del teclado */
+.estado-correcta {
+    --fondo: var(--gh-rosa);
+    --texto: white;
+}
+
+.estado-presente {
+    --fondo: var(--gh-noche);
+    --texto: white;
+}
+
+.estado-ausente {
+    --fondo: #b8a9b3;
+    --texto: white;
+}
+
+
+/* ---------- Casillas de la rejilla ---------- */
+
+/* var(--fondo, white): si la casilla no tiene estado, usa el valor por defecto (blanco) */
+.casilla {
+    width: clamp(2.6rem, 11vw, 3.4rem);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--fondo, #e3d6de);
+    border-radius: 0.5rem;
+    background-color: var(--fondo, white);
+    color: var(--texto, var(--gh-noche));
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+/* Cuadraditos de la leyenda */
+.casilla-mini {
+    width: 1rem;
+    border-radius: 0.25rem;
+}
+
+/* La última fila jugada se voltea: cada letra empieza un poco más tarde que la anterior */
+.fila-voltea .casilla {
+    animation: voltear 0.6s ease-in-out both;
+}
+
+.fila-voltea .casilla:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.fila-voltea .casilla:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.fila-voltea .casilla:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+.fila-voltea .casilla:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+/* Gira sobre el eje horizontal, como una persiana: a mitad del giro la letra no se ve */
+@keyframes voltear {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    50% {
+        transform: rotateX(90deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+
+/* ---------- Teclado en pantalla ---------- */
+
+/* Botones de Bootstrap con nuestras variables. Si la tecla tiene estado, toma sus colores */
+.tecla {
+    --bs-btn-bg: var(--fondo, #ece4ea);
+    --bs-btn-hover-bg: var(--fondo, #e0d4dc);
+    --bs-btn-active-bg: var(--fondo, #e0d4dc);
+    --bs-btn-color: var(--texto, var(--gh-noche));
+    --bs-btn-hover-color: var(--texto, var(--gh-noche));
+    --bs-btn-active-color: var(--texto, var(--gh-noche));
+    --bs-btn-padding-x: 0;
+    --bs-btn-padding-y: 0.6rem;
+    --bs-btn-font-weight: 700;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 2.6rem;
+}
+
+/* Teclas de Enviar y Borrar, más anchas */
+.tecla-ancha {
+    max-width: 4.2rem;
+    flex-grow: 1.6;
+    --bs-btn-font-size: 0.8rem;
+}
