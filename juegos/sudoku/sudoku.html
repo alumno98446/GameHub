@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku · Game Hub</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/estilos.css">
+    <link rel="stylesheet" href="sudoku.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar bg-noche py-3 sticky-top" data-bs-theme="dark">
+
+        <div class="container-fluid justify-content-center">
+
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                    <circle cx="8" cy="8" r="1.3" fill="currentColor"></circle>
+                    <circle cx="16" cy="8" r="1.3" fill="currentColor"></circle>
+                    <circle cx="12" cy="12" r="1.3" fill="currentColor"></circle>
+                    <circle cx="8" cy="16" r="1.3" fill="currentColor"></circle>
+                    <circle cx="16" cy="16" r="1.3" fill="currentColor"></circle>
+                </svg>
+                Game Hub
+            </a>
+        </div>
+    </nav>
+    <!-- Cabecera del juego: reutiliza el fondo del hero -->
+    <section class="hero text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col">
+                    <a href="../../index.html#juegos" class="text-white-50 text-decoration-none small">← Todos los
+                        juegos</a>
+                    <p class="categoria text-uppercase small fw-semibold mt-3 mb-1">Lógica</p>
+                    <h1 class="display-5 fw-bold">Sudoku</h1>
+                    <p class="lead text-white-50 mb-0">Completa la cuadrícula del 1 al 9 siguiendo las reglas del sudoku.</p>
+                </div>
+
+                <div class="col-auto d-none d-md-block">
+                    <img src="../../assets/img/pasatiempo.png" alt="" class="hero-ficha hero-ficha-1">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Zona de juego -->
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-sm-10 col-md-7 col-lg-5">
+                <div class="card tarjeta-juego p-4 text-center">
+                    <p class="text-body-secondary mb-0">Aquí irá el juego</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-noche text-white mt-auto pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <p class="footer-logo fs-4 fw-bold mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                            <circle cx="8" cy="8" r="1.3" fill="currentColor"></circle>
+                            <circle cx="16" cy="8" r="1.3" fill="currentColor"></circle>
+                            <circle cx="12" cy="12" r="1.3" fill="currentColor"></circle>
+                            <circle cx="8" cy="16" r="1.3" fill="currentColor"></circle>
+                            <circle cx="16" cy="16" r="1.3" fill="currentColor"></circle>
+                        </svg>
+                        Game Hub
+                    </p>
+                    <p class="text-white-50 mb-0">Minijuegos clásicos y retos de ingenio, todos en una sola web.</p>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <h3 class="h6 text-uppercase fw-semibold mb-3">Juegos</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="../3raya/3raya.html" class="footer-enlace">3 en raya</a></li>
+                        <li class="mb-2"><a href="../ahorcado/ahorcado.html" class="footer-enlace">Ahorcado</a></li>
+                        <li class="mb-2"><a href="../blackstories/blackstories.html" class="footer-enlace">Black
+                                Stories</a></li>
+                        <li class="mb-2"><a href="../quiz/quiz.html" class="footer-enlace">Quiz</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <h3 class="h6 text-uppercase fw-semibold mb-3">Más juegos</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="../wordle/wordle.html" class="footer-enlace">Wordle</a></li>
+                        <li class="mb-2"><a href="../sudoku/sudoku.html" class="footer-enlace">Sudoku</a></li>
+                        <li class="mb-2"><a href="../crucigrama/crucigrama.html"
+                                class="footer-enlace">Crucigramas</a></li>
+                        <li class="mb-2"><a href="../2048/2048.html" class="footer-enlace">2048</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-secondary my-4">
+            <p class="small text-white-50 text-center mb-0">Proyecto DWEC · Adrián Lozano Díaz — 2º DAW</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="sudoku.js"></script>
+</body>
+
+</html>
