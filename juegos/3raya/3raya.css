@@ -35,3 +35,12 @@
     }
 
 }
+/* Casillas de la línea ganadora*/
+.ganadora {
+    --bs-btn-bg: var(--gh-rosa);
+    --bs-btn-hover-bg: var(--gh-rosa);
+    --bs-btn-active-bg: var(--gh-rosa);
+    --bs-btn-color: white;
+    --bs-btn-hover-color: white;
+    --bs-btn-active-color: white;
+}

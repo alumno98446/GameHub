@@ -70,6 +70,10 @@ $(document).ready(function () {
             const valorC = celdas.eq(combinacion[2]).text();
 
             if (valorA !== "" && valorA === valorB && valorB === valorC) {
+                // Marcamos las 3 casillas de la línea ganadora
+                celdas.eq(combinacion[0]).addClass("ganadora");
+                celdas.eq(combinacion[1]).addClass("ganadora");
+                celdas.eq(combinacion[2]).addClass("ganadora");
                 return true;
             }
         }
@@ -85,12 +89,13 @@ $(document).ready(function () {
         return true;
     }
 
-        // Reiniciar: vaciamos las casillas y volvemos al estado inicial
+    // Reiniciar: vaciamos las casillas y volvemos al estado inicial
     $("#btn-reiniciar").on("click", function () {
         celdas.text("").removeClass("ficha-x ficha-o");
         turnoActual = "X";
         juegoTerminado = false;
         $("#turno-actual").text(turnoActual);
+        celdas.text("").removeClass("ficha-x ficha-o ganadora");
         $("#mensaje-final").text("").addClass("d-none");
     });
 
