@@ -13,10 +13,25 @@
     --bs-btn-color: var(--gh-rosa);
     --bs-btn-hover-color: var(--gh-rosa);
     --bs-btn-active-color: var(--gh-rosa);
+    animation: girar 0.5s ease-in-out;
 }
 
 .ficha-o {
     --bs-btn-color: var(--gh-noche);
     --bs-btn-hover-color: var(--gh-noche);
     --bs-btn-active-color: var(--gh-noche);
+    animation: girar 0.3s ease-in-out;
+}
+
+@keyframes girar {
+
+    0%,
+    100% {
+        rotate: 0deg;
+    }
+
+    50% {
+        rotate: 180deg;
+    }
+
 }
