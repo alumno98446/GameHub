@@ -20,15 +20,11 @@ $(document).ready(
         let fallos = 0;
         const abecedario = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 
-        for (let i = 0; i < palabraSecreta.length; i++) {
-            $("#palabra").append(`<span class="hueco"></span>`);
-        }
+        crearHuecos();
 
         for (let i = 0; i < abecedario.length; i++) {
             $("#teclado").append(`<button type="button" class="btn tecla-ahorcado">${abecedario[i]}</button>`);
         }
-
-
 
         $(".tecla-ahorcado").on("click", function () {
 
@@ -42,7 +38,7 @@ $(document).ready(
             for (let i = 0; i < palabraSecreta.length; i++) {
 
                 if (palabraSecreta[i] === letra) {
-                    $(`#palabra span:eq(${i})`).text(letra);
+                    $(".hueco").eq(i).text(letra);
                     acierto = true;
                 }
             }
@@ -74,6 +70,40 @@ $(document).ready(
             }
             $(this).prop("disabled", true);
         })
+
+        $("#boton-nueva-partida").on("click", function () {
+
+            indice++;
+            if (indice === palabras.length) {
+                indice = 0;
+            }
+            palabraSecreta = palabras[indice];
+
+            crearHuecos();
+
+            $(".tecla-ahorcado")
+                .removeClass("acertada fallada")
+                .prop("disabled", false);
+
+            fallos = 0;
+            $("#fallos").text(fallos);
+
+            $(".muneco").addClass("d-none");
+
+            $("#mensaje")
+                .text("")
+                .removeClass("alert-success alert-danger")
+                .addClass("d-none");
+
+            juegoTerminado = false;
+        });
+
+        function crearHuecos() {
+            $("#palabra").html("");
+            for (let i = 0; i < palabraSecreta.length; i++) {
+                $("#palabra").append(`<span class="hueco"></span>`);
+            }
+        }
 
         function palabraCompleta() {
             for (let i = 0; i < $(".hueco").length; i++) {
