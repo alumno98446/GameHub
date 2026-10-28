@@ -123,6 +123,14 @@
     box-shadow: 0 1rem 2rem rgba(27, 16, 41, 0.15);
 }
 
+/* Caja blanca donde va cada juego: igual que la tarjeta del index pero sin moverse al pasar el ratón */
+.caja-juego {
+    --bs-card-bg: white;
+    --bs-card-border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.75rem rgba(27, 16, 41, 0.08);
+}
+
 /* Zona de la imagen con fondo rosa suave */
 .tarjeta-imagen {
     background-color: var(--gh-rosa-claro);
