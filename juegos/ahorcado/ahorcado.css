@@ -4,7 +4,6 @@
     width: 100%;
 }
 
-/* La horca en color noche y el muñeco en rosa */
 .horca {
     stroke: var(--gh-noche);
 }
@@ -12,33 +11,6 @@
 .muneco {
     stroke: var(--gh-rosa);
 }
-
-/* Las partes que aún no se han dibujado: casi invisibles y con línea discontinua */
-.pendiente {
-    stroke: var(--gh-noche);
-    opacity: 0.12;
-    stroke-dasharray: 8 8;
-}
-
-/* Efecto de "dibujarse solo".
-   Con pathLength="1" en el SVG, cada trazo mide 1 aunque sea largo o corto.
-   - stroke-dasharray: 1  → el trazo es un único guion de largo 1 (el trazo entero)
-   - stroke-dashoffset: 1 → ese guion empieza desplazado del todo, así que no se ve
-   La animación lleva el desplazamiento a 0 y el trazo aparece de principio a fin.
-   Cada trazo espera según su --orden (puesto en el HTML) para dibujarse uno detrás de otro */
-.trazo {
-    stroke-dasharray: 1;
-    stroke-dashoffset: 1;
-    animation: dibujar 0.4s ease-out forwards;
-    animation-delay: calc(var(--orden) * 0.3s);
-}
-
-@keyframes dibujar {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
 
 /* ---------- Palabra ---------- */
 
@@ -71,10 +43,11 @@
 
 /* Letra que está en la palabra */
 .acertada {
-    --bs-btn-bg: var(--gh-rosa);
-    --bs-btn-hover-bg: var(--gh-rosa);
-    --bs-btn-color: white;
-    --bs-btn-hover-color: white;
+    --bs-btn-disabled-bg: var(--gh-rosa);
+    --bs-btn-disabled-color: white;
+    --bs-btn-disabled-border-color: transparent;
+    --bs-btn-disabled-opacity: 1;
+
 }
 
 /* Letra que no está: gris y tachada. Bootstrap ya la deja sin poder pulsar por el atributo disabled */
