@@ -47,13 +47,11 @@
     --bs-btn-disabled-color: white;
     --bs-btn-disabled-border-color: transparent;
     --bs-btn-disabled-opacity: 1;
-
 }
 
 /* Letra que no está: gris y tachada. Bootstrap ya la deja sin poder pulsar por el atributo disabled */
 .fallada {
     --bs-btn-disabled-bg: #ece4ea;
     --bs-btn-disabled-color: #9b8b96;
-    --bs-btn-disabled-border-color: transparent;
     text-decoration: line-through;
 }

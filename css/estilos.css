@@ -108,27 +108,23 @@
     --bs-nav-link-hover-color: var(--gh-rosa);
 }
 
-/* cambio variables de la card de Bootstrap */
-.tarjeta-juego {
+/* Tarjetas del index y caja de cada juego: cambio variables de la card de Bootstrap */
+.tarjeta-juego,
+.caja-juego {
     --bs-card-bg: white; /* fondo blanco porque bs usa el color del fondo de la página */
     --bs-card-border-radius: 1.5rem;
     overflow: hidden;
     box-shadow: 0 0.25rem 0.75rem rgba(27, 16, 41, 0.08);
+}
+
+/* Solo las tarjetas del index se mueven: al pasar el ratón suben un poco y la sombra crece */
+.tarjeta-juego {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Al pasar el ratón la tarjeta sube un poco y la sombra crece */
 .tarjeta-juego:hover {
     transform: translateY(-6px);
     box-shadow: 0 1rem 2rem rgba(27, 16, 41, 0.15);
-}
-
-/* Caja blanca donde va cada juego: igual que la tarjeta del index pero sin moverse al pasar el ratón */
-.caja-juego {
-    --bs-card-bg: white;
-    --bs-card-border-radius: 1.5rem;
-    overflow: hidden;
-    box-shadow: 0 0.25rem 0.75rem rgba(27, 16, 41, 0.08);
 }
 
 /* Zona de la imagen con fondo rosa suave */
