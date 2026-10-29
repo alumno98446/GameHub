@@ -46,128 +46,103 @@
                 <div class="col-auto d-none d-md-block">
                     <img src="../../assets/img/blackstories.png" alt="" class="hero-ficha hero-ficha-1">
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Zona de juego -->
     <main class="container py-5">
         <div class="row g-4 justify-content-center align-items-center">
 
-            <!-- Izquierda: las cartas de los enigmas (solo se ve la de la página activa) -->
             <div class="col-md-5 col-lg-4">
 
-                <!-- Enigma 1: El hombre del ascensor -->
                 <div class="enigma" data-enigma="1">
-                    <div class="carta-misterio mx-auto" tabindex="0">
-                        <div class="carta-interior">
+                    <div class="carta-misterio mx-auto">
+                        <div class="carta-cara bg-noche text-white rounded-4 p-4 text-center">
+                            <span class="badge rounded-pill bg-white text-dark align-self-center mb-3">Enigma nº
+                                1</span>
 
-                            <!-- Cara delantera: dibujo y enigma -->
-                            <div class="carta-cara bg-noche text-white rounded-4 p-4 text-center">
-                                <span class="badge rounded-pill bg-white text-dark align-self-center mb-3">Enigma nº
-                                    1</span>
+                            <svg class="carta-dibujo mx-auto mb-3" viewBox="0 0 100 120" fill="none"
+                                stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true">
+                                <rect x="15" y="25" width="70" height="90" rx="4"></rect>
+                                <line x1="50" y1="25" x2="50" y2="115"></line>
+                                <rect x="35" y="5" width="30" height="12" rx="3"></rect>
+                                <path d="M45 13 l5 -5 l5 5"></path>
+                                <circle cx="93" cy="62" r="3"></circle>
+                                <circle cx="93" cy="74" r="3"></circle>
+                            </svg>
 
-                                <!-- Dibujo de un ascensor hecho con SVG -->
-                                <svg class="carta-dibujo mx-auto mb-3" viewBox="0 0 100 120" fill="none"
-                                    stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true">
-                                    <rect x="15" y="25" width="70" height="90" rx="4"></rect>
-                                    <line x1="50" y1="25" x2="50" y2="115"></line>
-                                    <rect x="35" y="5" width="30" height="12" rx="3"></rect>
-                                    <path d="M45 13 l5 -5 l5 5"></path>
-                                    <circle cx="93" cy="62" r="3"></circle>
-                                    <circle cx="93" cy="74" r="3"></circle>
-                                </svg>
+                            <h2 class="h4 fw-bold">El hombre del ascensor</h2>
+                            <p class="text-white-50 small">Un hombre vive en el décimo piso. Cada mañana baja en ascensor hasta la calle. Al
+                                volver, sube en ascensor hasta el séptimo y el resto lo hace por las escaleras. Los
+                                días de lluvia sube directamente hasta el décimo. ¿Por qué?</p>
+                        </div>
 
-                                <h2 class="h4 fw-bold">El hombre del ascensor</h2>
-                                <p class="text-white-50 small">Un hombre vive en el décimo piso. Cada mañana baja en ascensor hasta la calle. Al
-                                    volver, sube en ascensor hasta el séptimo y el resto lo hace por las escaleras. Los
-                                    días de lluvia sube directamente hasta el décimo. ¿Por qué?</p>
-                                <p class="categoria text-uppercase small fw-semibold mt-auto mb-0">Pasa el ratón para
-                                    ver la solución</p>
-                            </div>
-
-                            <!-- Cara trasera: la solución -->
-                            <div class="carta-cara carta-dorso text-white rounded-4 p-4 text-center justify-content-center">
-                                <span class="badge rounded-pill bg-white text-dark align-self-center mb-3">Solución</span>
-                                <p class="fs-5 mb-0">Es muy bajito y solo llega al botón del séptimo. Los días de lluvia lleva paraguas
-                                    y lo usa para pulsar el del décimo.</p>
-                            </div>
-
+                        <div class="carta-cara carta-dorso text-white rounded-4 p-4 text-center mt-3 justify-content-center">
+                            <span class="badge rounded-pill bg-white text-dark align-self-center mb-3">Solución</span>
+                            <p class="fs-5 mb-0">Es muy bajito y solo llega al botón del séptimo. Los días de lluvia lleva paraguas
+                                y lo usa para pulsar el del décimo.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Enigma 2: El hombre del campo -->
                 <div class="enigma d-none" data-enigma="2">
-                    <div class="carta-misterio mx-auto" tabindex="0">
-                        <div class="carta-interior">
+                    <div class="carta-misterio mx-auto">
+                        <!-- Cara delantera: dibujo y enigma -->
+                        <div class="carta-cara bg-noche text-white rounded-4 p-4 text-center">
+                            <span class="badge rounded-pill bg-white text-dark align-self-center mb-3">Enigma nº
+                                2</span>
 
-                            <!-- Cara delantera: dibujo y enigma -->
-                            <div class="carta-cara bg-noche text-white rounded-4 p-4 text-center">
-                                <span class="badge rounded-pill bg-white text-dark align-self-center mb-3">Enigma nº
-                                    2</span>
+                            <!-- Dibujo de un paracaídas hecho con SVG -->
+                            <svg class="carta-dibujo mx-auto mb-3" viewBox="0 0 100 120" fill="none"
+                                stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true">
+                                <path d="M10 55 Q50 0 90 55"></path>
+                                <path d="M10 55 Q30 45 50 55 Q70 45 90 55"></path>
+                                <line x1="10" y1="55" x2="45" y2="95"></line>
+                                <line x1="50" y1="55" x2="50" y2="95"></line>
+                                <line x1="90" y1="55" x2="55" y2="95"></line>
+                                <rect x="40" y="95" width="20" height="20" rx="3"></rect>
+                            </svg>
 
-                                <!-- Dibujo de un paracaídas hecho con SVG -->
-                                <svg class="carta-dibujo mx-auto mb-3" viewBox="0 0 100 120" fill="none"
-                                    stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true">
-                                    <path d="M10 55 Q50 0 90 55"></path>
-                                    <path d="M10 55 Q30 45 50 55 Q70 45 90 55"></path>
-                                    <line x1="10" y1="55" x2="45" y2="95"></line>
-                                    <line x1="50" y1="55" x2="50" y2="95"></line>
-                                    <line x1="90" y1="55" x2="55" y2="95"></line>
-                                    <rect x="40" y="95" width="20" height="20" rx="3"></rect>
-                                </svg>
+                            <h2 class="h4 fw-bold">El hombre del campo</h2>
+                            <p class="text-white-50 small">Un hombre aparece muerto en medio de un campo. A su lado hay un paquete sin abrir.
+                                No hay huellas alrededor, ni suyas ni de nadie. ¿Qué ha pasado?</p>
+                        </div>
 
-                                <h2 class="h4 fw-bold">El hombre del campo</h2>
-                                <p class="text-white-50 small">Un hombre aparece muerto en medio de un campo. A su lado hay un paquete sin abrir.
-                                    No hay huellas alrededor, ni suyas ni de nadie. ¿Qué ha pasado?</p>
-                                <p class="categoria text-uppercase small fw-semibold mt-auto mb-0">Pasa el ratón para
-                                    ver la solución</p>
-                            </div>
-
-                            <!-- Cara trasera: la solución -->
-                            <div class="carta-cara carta-dorso text-white rounded-4 p-4 text-center justify-content-center">
-                                <span class="badge rounded-pill bg-white text-dark align-self-center mb-3">Solución</span>
-                                <p class="fs-5 mb-0">Saltó de un avión y el paquete es su paracaídas, que no llegó a abrirse.</p>
-                            </div>
-
+                        <!-- Cara trasera: la solución -->
+                        <div class="carta-cara carta-dorso text-white rounded-4 p-4 text-center mt-3 justify-content-center">
+                            <span class="badge rounded-pill bg-white text-dark align-self-center mb-3">Solución</span>
+                            <p class="fs-5 mb-0">Saltó de un avión y el paquete es su paracaídas, que no llegó a abrirse.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Enigma 3: Romeo y Julieta -->
                 <div class="enigma d-none" data-enigma="3">
-                    <div class="carta-misterio mx-auto" tabindex="0">
-                        <div class="carta-interior">
+                    <div class="carta-misterio mx-auto">
+                        <!-- Cara delantera: dibujo y enigma -->
+                        <div class="carta-cara bg-noche text-white rounded-4 p-4 text-center">
+                            <span class="badge rounded-pill bg-white text-dark align-self-center mb-3">Enigma nº
+                                3</span>
 
-                            <!-- Cara delantera: dibujo y enigma -->
-                            <div class="carta-cara bg-noche text-white rounded-4 p-4 text-center">
-                                <span class="badge rounded-pill bg-white text-dark align-self-center mb-3">Enigma nº
-                                    3</span>
+                            <!-- Dibujo de un pez hecho con SVG -->
+                            <svg class="carta-dibujo mx-auto mb-3" viewBox="0 0 100 120" fill="none"
+                                stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true">
+                                <path d="M20 60 Q50 25 80 60 Q50 95 20 60 Z"></path>
+                                <path d="M80 60 L97 45 L97 75 Z"></path>
+                                <circle cx="38" cy="55" r="3"></circle>
+                                <path d="M8 100 l8 -8 M30 108 l6 -10 M60 104 l10 -6 M84 110 l6 -8"></path>
+                            </svg>
 
-                                <!-- Dibujo de un pez hecho con SVG -->
-                                <svg class="carta-dibujo mx-auto mb-3" viewBox="0 0 100 120" fill="none"
-                                    stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true">
-                                    <path d="M20 60 Q50 25 80 60 Q50 95 20 60 Z"></path>
-                                    <path d="M80 60 L97 45 L97 75 Z"></path>
-                                    <circle cx="38" cy="55" r="3"></circle>
-                                    <path d="M8 100 l8 -8 M30 108 l6 -10 M60 104 l10 -6 M84 110 l6 -8"></path>
-                                </svg>
+                            <h2 class="h4 fw-bold">Romeo y Julieta</h2>
+                            <p class="text-white-50 small">Romeo y Julieta yacen muertos en el suelo del salón. A su alrededor hay agua y
+                                cristales rotos. Nadie ha entrado en la casa. ¿Qué ha pasado?</p>
+                        </div>
 
-                                <h2 class="h4 fw-bold">Romeo y Julieta</h2>
-                                <p class="text-white-50 small">Romeo y Julieta yacen muertos en el suelo del salón. A su alrededor hay agua y
-                                    cristales rotos. Nadie ha entrado en la casa. ¿Qué ha pasado?</p>
-                                <p class="categoria text-uppercase small fw-semibold mt-auto mb-0">Pasa el ratón para
-                                    ver la solución</p>
-                            </div>
-
-                            <!-- Cara trasera: la solución -->
-                            <div class="carta-cara carta-dorso text-white rounded-4 p-4 text-center justify-content-center">
-                                <span class="badge rounded-pill bg-white text-dark align-self-center mb-3">Solución</span>
-                                <p class="fs-5 mb-0">Romeo y Julieta son dos peces. El gato tiró la pecera al suelo y se rompió.</p>
-                            </div>
-
+                        <!-- Cara trasera: la solución -->
+                        <div class="carta-cara carta-dorso text-white rounded-4 p-4 text-center mt-3 justify-content-center">
+                            <span class="badge rounded-pill bg-white text-dark align-self-center mb-3">Solución</span>
+                            <p class="fs-5 mb-0">Romeo y Julieta son dos peces. El gato tiró la pecera al suelo y se rompió.</p>
                         </div>
                     </div>
                 </div>
@@ -260,7 +235,6 @@
                             aria-label="Pregunta">
                         <button type="button" class="btn btn-primary fw-semibold">Preguntar</button>
                     </div>
-
                 </div>
             </div>
 
